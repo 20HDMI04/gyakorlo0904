@@ -86,7 +86,7 @@ form.onsubmit = async (e) => {
 	});
 
 	const addedItem = await res.json();
-	console.log(addedItem);
+	app!.innerHTML = "";
 	form.reset();
 	init();
 };
