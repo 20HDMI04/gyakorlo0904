@@ -77,15 +77,13 @@ form.onsubmit = async (e) => {
 		Number: parseInt(numberInput.value),
 	};
 
-	const res = await fetch("https://api-generator.retool.com/Ft4671/data", {
+	await fetch("https://api-generator.retool.com/Ft4671/data", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
 		},
 		body: JSON.stringify(newitem),
 	});
-
-	const addedItem = await res.json();
 	app!.innerHTML = "";
 	form.reset();
 	init();
